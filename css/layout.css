@@ -1,0 +1,265 @@
+/* ============================================================
+   LAYOUT — nav, footer, containers  |  ELEVN style
+   ============================================================ */
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+section { padding: 72px 0; }
+
+/* ─── HEADER ────────────────────────────────────────────────── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+/* Logo */
+.logo {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+/* Nav */
+.main-nav ul {
+  display: flex;
+  gap: 36px;
+}
+.main-nav a {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-2);
+  letter-spacing: 0.02em;
+  transition: color var(--dur);
+  position: relative;
+  padding-bottom: 3px;
+}
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 1px;
+  background: var(--text);
+  transition: width var(--dur) var(--ease);
+}
+.main-nav a:hover,
+.main-nav a.active { color: var(--text); }
+.main-nav a:hover::after,
+.main-nav a.active::after { width: 100%; }
+
+/* Header icons */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.header-icons a {
+  color: var(--text-2);
+  font-size: 18px;
+  line-height: 1;
+  transition: color var(--dur);
+  display: flex;
+  align-items: center;
+}
+.header-icons a:hover { color: var(--text); }
+.cart-icon {
+  position: relative;
+}
+.cart-badge {
+  position: absolute;
+  top: -6px; right: -8px;
+  background: var(--text);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile toggle */
+.menu-toggle {
+  display: none;
+  font-size: 22px;
+  color: var(--text);
+}
+
+/* ─── MOBILE MENU ───────────────────────────────────────────── */
+.mob-menu {
+  display: none;
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--border);
+  padding: 20px var(--gutter) 28px;
+}
+.mob-menu.open { display: block; }
+.mob-menu ul { display: flex; flex-direction: column; }
+.mob-menu li { border-bottom: 1px solid var(--border); }
+.mob-menu a {
+  display: block;
+  padding: 13px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-2);
+  transition: color var(--dur);
+}
+.mob-menu a:hover { color: var(--text); }
+
+/* ─── SECTION HEAD (left-aligned with 'view all' link) ─────── */
+.sec-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+.sec-head h2 {
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.sec-head-right {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-3);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--dur);
+}
+.sec-head-right:hover { color: var(--text); }
+
+/* ─── PAGE HEADER ───────────────────────────────────────────── */
+.page-header {
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--border);
+  padding: 48px 0 40px;
+  text-align: center;
+}
+.page-header h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.page-header p {
+  font-size: 14px;
+  color: var(--text-3);
+}
+
+/* ─── FOOTER ────────────────────────────────────────────────── */
+.site-footer {
+  background: var(--bg-white);
+  border-top: 1px solid var(--border);
+  padding: 60px 0 0;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+}
+
+.footer-brand .logo {
+  font-size: 22px;
+  margin-bottom: 14px;
+  display: block;
+}
+.footer-brand p {
+  font-size: 13px;
+  color: var(--text-3);
+  max-width: 220px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.footer-socials {
+  display: flex;
+  gap: 14px;
+}
+.footer-socials a {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: var(--text-2);
+  transition: all var(--dur);
+}
+.footer-socials a:hover {
+  background: var(--text);
+  border-color: var(--text);
+  color: #fff;
+}
+
+.footer-col h4 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 18px;
+}
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col a {
+  font-size: 13px;
+  color: var(--text-3);
+  transition: color var(--dur);
+}
+.footer-col a:hover { color: var(--text); }
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding: 18px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text-3);
+}
+.footer-bottom a {
+  color: var(--text-3);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  transition: color var(--dur);
+}
+.footer-bottom a:hover { color: var(--text); }
+.footer-bottom-links {
+  display: flex;
+  gap: 28px;
+}
+
+/* ─── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .main-nav { display: none; }
+  .menu-toggle { display: block; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+  :root { --gutter: 16px; }
+  .header-inner { height: 56px; }
+  section { padding: 48px 0; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+  .footer-bottom-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
+}

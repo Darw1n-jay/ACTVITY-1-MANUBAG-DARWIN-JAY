@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Men's Collection — ELEVN</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+<div class="sale-callout">Free shipping on orders over $80 — <a href="sale.html">Shop Sale →</a></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">ELEVN</a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="shop.html">Collection</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="about.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-icons">
+      <a href="#" aria-label="Search">🔍</a>
+      <a href="#" aria-label="Account">👤</a>
+      <a href="#" class="cart-icon" aria-label="Cart">🛒<span class="cart-badge">0</span></a>
+      <button class="menu-toggle" aria-label="Open menu"
+        onclick="document.getElementById('mobMenu').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+  <nav class="mob-menu" id="mobMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="sale.html">Sale</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="page-header">
+  <div class="container">
+    <h1>Men's Collection</h1>
+    <p>Timeless pieces crafted with premium fabrics</p>
+  </div>
+</div>
+
+<section style="background:var(--bg);">
+  <div class="container">
+
+    <div class="filter-tabs">
+      <button class="filter-tab active" onclick="setTab(this)">All</button>
+      <button class="filter-tab" onclick="setTab(this)">Hoodies</button>
+      <button class="filter-tab" onclick="setTab(this)">Jackets</button>
+      <button class="filter-tab" onclick="setTab(this)">T-Shirts</button>
+      <button class="filter-tab" onclick="setTab(this)">Pants</button>
+    </div>
+
+    <div class="product-grid">
+
+      <a href="product.html" class="product-card">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&q=80"
+            alt="Shirt Jacket" loading="lazy">
+          <button class="thumb-action" aria-label="Add to cart">🛒</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star star-empty">★</span>
+            <span class="stars-count">(128)</span>
+          </div>
+          <div class="product-name">Shirt Jacket</div>
+          <div class="product-price-row"><span class="product-price">₩10,180</span></div>
+        </div>
+      </a>
+
+      <a href="product.html" class="product-card">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1548126032-079a0fb0099d?w=600&q=80"
+            alt="Oversized Hoodie" loading="lazy">
+          <button class="thumb-action" aria-label="Add to cart">🛒</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star">★</span>
+            <span class="stars-count">(100)</span>
+          </div>
+          <div class="product-name">Oversized Hoodie</div>
+          <div class="product-price-row"><span class="product-price">₩12,699</span></div>
+        </div>
+      </a>
+
+      <a href="product.html" class="product-card">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80"
+            alt="Puffer Jacket" loading="lazy">
+          <span class="card-badge badge-new">New</span>
+          <button class="thumb-action" aria-label="Add to cart">🛒</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star star-empty">★</span>
+            <span class="stars-count">(106)</span>
+          </div>
+          <div class="product-name">Puffer Jacket</div>
+          <div class="product-price-row"><span class="product-price">₩16,999</span></div>
+        </div>
+      </a>
+
+      <a href="product.html" class="product-card">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1520975954732-35dd22299614?w=600&q=80"
+            alt="Varsity Jacket" loading="lazy">
+          <span class="card-badge badge-hot">Hot</span>
+          <button class="thumb-action" aria-label="Add to cart">🛒</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star">★</span>
+            <span class="stars-count">(100)</span>
+          </div>
+          <div class="product-name">Varsity Jacket</div>
+          <div class="product-price-row"><span class="product-price">₩15,400</span></div>
+        </div>
+      </a>
+
+      <a href="product.html" class="product-card">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=600&q=80"
+            alt="Flannel Shirt" loading="lazy">
+          <button class="thumb-action" aria-label="Add to cart">🛒</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star star-empty">★</span>
+            <span class="stars-count">(206)</span>
+          </div>
+          <div class="product-name">Flannel Shirt</div>
+          <div class="product-price-row"><span class="product-price">₩6,495</span></div>
+        </div>
+      </a>
+
+      <a href="product.html" class="product-card">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&q=80"
+            alt="Cargo Pant" loading="lazy">
+          <button class="thumb-action" aria-label="Add to cart">🛒</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star">★</span>
+            <span class="stars-count">(133)</span>
+          </div>
+          <div class="product-name">Cargo Pant</div>
+          <div class="product-price-row"><span class="product-price">₩9,270</span></div>
+        </div>
+      </a>
+
+      <a href="product.html" class="product-card">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=600&q=80"
+            alt="Wide Leg Pant" loading="lazy">
+          <button class="thumb-action" aria-label="Add to cart">🛒</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star star-empty">★</span>
+            <span class="stars-count">(298)</span>
+          </div>
+          <div class="product-name">Wide Leg Pant</div>
+          <div class="product-price-row"><span class="product-price">₩7,900</span></div>
+        </div>
+      </a>
+
+      <a href="product.html" class="product-card">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?w=600&q=80"
+            alt="Stripe Polo" loading="lazy">
+          <button class="thumb-action" aria-label="Add to cart">🛒</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star">★</span>
+            <span class="stars-count">(211)</span>
+          </div>
+          <div class="product-name">Stripe Polo</div>
+          <div class="product-price-row"><span class="product-price">₩11,200</span></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">ELEVN</a>
+        <p>Timeless style. Modern comfort. Quality pieces that last.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">in</a>
+          <a href="#" aria-label="Twitter">tw</a>
+          <a href="#" aria-label="Pinterest">p</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All products</a></li>
+          <li><a href="men.html">Hoodies</a></li>
+          <li><a href="men.html">Jackets</a></li>
+          <li><a href="women.html">Pants</a></li>
+          <li><a href="accessories.html">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Size Guide</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>2026 ELEVN All Rights Reserved</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function setTab(el) {
+  document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+}
+</script>
+
+</body>
+</html>

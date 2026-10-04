@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sale — ELEVN</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">ELEVN</a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="shop.html">Collection</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="about.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-icons">
+      <a href="#" aria-label="Search">🔍</a>
+      <a href="#" aria-label="Account">👤</a>
+      <a href="#" class="cart-icon" aria-label="Cart">🛒<span class="cart-badge">0</span></a>
+      <button class="menu-toggle" aria-label="Open menu"
+        onclick="document.getElementById('mobMenu').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+  <nav class="mob-menu" id="mobMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="sale.html">Sale</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- SALE HERO -->
+<div class="sale-hero">
+  <div class="container">
+    <p style="font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:10px;position:relative;z-index:1;">21SS Capsule Collection</p>
+    <h1>Up To <span>60% Off</span></h1>
+    <p>Exclusive markdowns on selected pieces. No code needed — while stock lasts.</p>
+    <div class="countdown">
+      <div class="cd-unit">
+        <span class="cd-num" id="cdH">--</span>
+        <span class="cd-label">Hours</span>
+      </div>
+      <div class="cd-unit">
+        <span class="cd-num" id="cdM">--</span>
+        <span class="cd-label">Minutes</span>
+      </div>
+      <div class="cd-unit">
+        <span class="cd-num" id="cdS">--</span>
+        <span class="cd-label">Seconds</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section style="background:var(--bg);">
+  <div class="container">
+
+    <div class="section-title" style="margin-bottom:36px;">
+      <h2>Sale Items</h2>
+      <p>Limited time — shop before it's gone</p>
+    </div>
+
+    <div class="filter-tabs">
+      <button class="filter-tab active" onclick="setTab(this)">All</button>
+      <button class="filter-tab" onclick="setTab(this)">Men</button>
+      <button class="filter-tab" onclick="setTab(this)">Women</button>
+      <button class="filter-tab" onclick="setTab(this)">Accessories</button>
+    </div>
+
+    <div class="product-grid">
+
+      <a href="product.html" class="product-card">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&q=80"
+            alt="Shirt Jacket" loading="lazy">
+          <span class="card-badge badge-sale">-20%</span>
+          <button class="thumb-action" aria-label="Add to cart">🛒</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star star-empty">★</span>
+            <span class="stars-count">(128)</span>
+          </div>
+          <div class="product-name">Shirt Jacket</div>
+          <div class="product-price-row">
+            <div>
+              <span class="product-price-orig">₩10,180</span>
+              <span class="product-price-sale">₩8,144</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="product.html" class="product-card">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&q=80"
+            alt="Linen Wide Pants" loading="lazy">
+          <span class="card-badge badge-sale">-25%</span>
+          <button class="thumb-action" aria-label="Add to cart">🛒</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star star-empty">★</span>
+            <span class="stars-count">(76)</span>
+          </div>
+          <div class="product-name">Linen Wide Pants</div>
+          <div class="product-price-row">
+            <div>
+              <span class="product-price-orig">₩11,800</span>
+              <span class="product-price-sale">₩8,850</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="product.html" class="product-card">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=600&q=80"
+            alt="Flannel Shirt" loading="lazy">
+          <span class="card-badge badge-sale">-30%</span>
+          <button class="thumb-action" aria-label="Add to cart">🛒</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star star-empty">★</span>
+            <span class="stars-count">(206)</span>
+          </div>
+          <div class="product-name">Flannel Shirt</div>
+          <div class="product-price-row">
+            <div>
+              <span class="product-price-orig">₩6,495</span>
+              <span class="product-price-sale">₩4,547</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="product.html" class="product-card">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&q=80"
+            alt="Relaxed Dress" loading="lazy">
+          <span class="card-badge badge-sale">-40%</span>
+          <button class="thumb-action" aria-label="Add to cart">🛒</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star">★</span>
+            <span class="stars-count">(143)</span>
+          </div>
+          <div class="product-name">Relaxed Dress</div>
+          <div class="product-price-row">
+            <div>
+              <span class="product-price-orig">₩13,500</span>
+              <span class="product-price-sale">₩8,100</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="product.html" class="product-card">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=600&q=80"
+            alt="Wide Leg Pant" loading="lazy">
+          <span class="card-badge badge-sale">-20%</span>
+          <button class="thumb-action" aria-label="Add to cart">🛒</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star star-empty">★</span>
+            <span class="stars-count">(298)</span>
+          </div>
+          <div class="product-name">Wide Leg Pant</div>
+          <div class="product-price-row">
+            <div>
+              <span class="product-price-orig">₩7,900</span>
+              <span class="product-price-sale">₩6,320</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="product.html" class="product-card">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?w=600&q=80"
+            alt="Stripe Polo" loading="lazy">
+          <span class="card-badge badge-sale">-35%</span>
+          <button class="thumb-action" aria-label="Add to cart">🛒</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star">★</span>
+            <span class="stars-count">(211)</span>
+          </div>
+          <div class="product-name">Stripe Polo</div>
+          <div class="product-price-row">
+            <div>
+              <span class="product-price-orig">₩11,200</span>
+              <span class="product-price-sale">₩7,280</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="product.html" class="product-card">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1520975954732-35dd22299614?w=600&q=80"
+            alt="Varsity Jacket" loading="lazy">
+          <span class="card-badge badge-sale">-60%</span>
+          <button class="thumb-action" aria-label="Add to cart">🛒</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star">★</span>
+            <span class="stars-count">(100)</span>
+          </div>
+          <div class="product-name">Varsity Jacket</div>
+          <div class="product-price-row">
+            <div>
+              <span class="product-price-orig">₩15,400</span>
+              <span class="product-price-sale">₩6,160</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="product.html" class="product-card">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1554568218-0f1715e72254?w=600&q=80"
+            alt="Tech Hoodie" loading="lazy">
+          <span class="card-badge badge-sale">-30%</span>
+          <button class="thumb-action" aria-label="Add to cart">🛒</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star">★</span>
+            <span class="stars-count">(45)</span>
+          </div>
+          <div class="product-name">Tech Hoodie</div>
+          <div class="product-price-row">
+            <div>
+              <span class="product-price-orig">₩14,800</span>
+              <span class="product-price-sale">₩10,360</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<div class="newsletter">
+  <div class="container">
+    <div class="newsletter-inner">
+      <h3>Get Sale Alerts First</h3>
+      <p>Be the first to know when new markdowns drop. No spam — just great deals.</p>
+      <form onsubmit="event.preventDefault();this.innerHTML='<p style=\'font-size:13px;font-weight:600;color:#1a1a1a;\'>✓ You\'re subscribed!</p>'">
+        <input type="email" placeholder="Enter your email" required aria-label="Email">
+        <button type="submit" class="btn btn-dark btn-sm">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">ELEVN</a>
+        <p>Timeless style. Modern comfort. Quality pieces that last.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">in</a>
+          <a href="#" aria-label="Twitter">tw</a>
+          <a href="#" aria-label="Pinterest">p</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All products</a></li>
+          <li><a href="men.html">Men</a></li>
+          <li><a href="women.html">Women</a></li>
+          <li><a href="accessories.html">Accessories</a></li>
+          <li><a href="sale.html">Sale</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Size Guide</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>2026 ELEVN All Rights Reserved</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function setTab(el) {
+  document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+}
+const end = new Date(Date.now() + 48 * 3600 * 1000);
+function tick() {
+  const d = end - Date.now();
+  if (d <= 0) return;
+  document.getElementById('cdH').textContent = String(Math.floor(d / 3600000)).padStart(2, '0');
+  document.getElementById('cdM').textContent = String(Math.floor((d % 3600000) / 60000)).padStart(2, '0');
+  document.getElementById('cdS').textContent = String(Math.floor((d % 60000) / 1000)).padStart(2, '0');
+}
+tick(); setInterval(tick, 1000);
+</script>
+
+</body>
+</html>

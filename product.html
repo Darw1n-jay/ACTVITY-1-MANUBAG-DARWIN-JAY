@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puffer Jacket — ELEVN</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+<div class="sale-callout">Free shipping on orders over $80 — <a href="sale.html">Shop Sale →</a></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">ELEVN</a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="shop.html">Collection</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="about.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-icons">
+      <a href="#" aria-label="Search">🔍</a>
+      <a href="#" aria-label="Account">👤</a>
+      <a href="#" class="cart-icon" aria-label="Cart">🛒<span class="cart-badge" id="cartCount">0</span></a>
+      <button class="menu-toggle" aria-label="Open menu"
+        onclick="document.getElementById('mobMenu').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+  <nav class="mob-menu" id="mobMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="sale.html">Sale</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section style="background:var(--bg);">
+  <div class="container">
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="shop.html">Shop</a>
+      <span class="breadcrumb-sep">/</span>
+      <span>Puffer Jacket</span>
+    </div>
+
+    <div class="pd-wrap">
+
+      <!-- GALLERY -->
+      <div class="pd-gallery">
+        <div class="pd-main">
+          <img
+            src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=900&q=80"
+            alt="Puffer Jacket — front"
+            id="mainImg"
+            loading="eager"
+          >
+        </div>
+        <div class="pd-thumbs">
+          <div class="pd-thumb active"
+            onclick="swapImg(this,'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=900&q=80')">
+            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=200&q=70" alt="Front">
+          </div>
+          <div class="pd-thumb"
+            onclick="swapImg(this,'https://images.unsplash.com/photo-1520975954732-35dd22299614?w=900&q=80')">
+            <img src="https://images.unsplash.com/photo-1520975954732-35dd22299614?w=200&q=70" alt="Back">
+          </div>
+          <div class="pd-thumb"
+            onclick="swapImg(this,'https://images.unsplash.com/photo-1554568218-0f1715e72254?w=900&q=80')">
+            <img src="https://images.unsplash.com/photo-1554568218-0f1715e72254?w=200&q=70" alt="Detail">
+          </div>
+          <div class="pd-thumb"
+            onclick="swapImg(this,'https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=900&q=80')">
+            <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=200&q=70" alt="Styled">
+          </div>
+        </div>
+      </div>
+
+      <!-- INFO -->
+      <div class="pd-info">
+        <span class="pd-cat">Jackets</span>
+        <h1>Puffer Jacket</h1>
+
+        <div class="pd-stars">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star star-empty">★</span>
+          </div>
+          <span class="stars-count">4.0 (106 reviews)</span>
+        </div>
+
+        <div class="pd-price">
+          ₩16,999
+        </div>
+
+        <div class="pd-divider"></div>
+
+        <p class="pd-desc">
+          A clean, modern puffer jacket made with a lightweight ripstop outer shell and
+          warm synthetic fill. Designed for everyday wear — comfortable enough for the
+          city, warm enough for the cold. Available in three versatile colourways.
+        </p>
+
+        <!-- Color -->
+        <div class="opt-group">
+          <div class="opt-label">
+            Colour — <span id="colorLabel" style="font-weight:400;text-transform:none;letter-spacing:0;">Sage Green</span>
+          </div>
+          <div class="opt-row">
+            <button class="color-swatch sel" style="background:#8a9e8a;" title="Sage Green"
+              onclick="pickColor(this,'Sage Green')" aria-label="Sage Green"></button>
+            <button class="color-swatch" style="background:#3d3d3d;" title="Charcoal"
+              onclick="pickColor(this,'Charcoal')" aria-label="Charcoal"></button>
+            <button class="color-swatch" style="background:#c8b89a;" title="Beige"
+              onclick="pickColor(this,'Beige')" aria-label="Beige"></button>
+            <button class="color-swatch" style="background:#4a6080;" title="Navy"
+              onclick="pickColor(this,'Navy')" aria-label="Navy"></button>
+          </div>
+        </div>
+
+        <!-- Size -->
+        <div class="opt-group">
+          <div class="opt-label">
+            Size
+            <a href="#">Size Guide</a>
+          </div>
+          <div class="opt-row" id="sizeGroup">
+            <button class="opt-btn" onclick="pickSize(this)">XS</button>
+            <button class="opt-btn" onclick="pickSize(this)">S</button>
+            <button class="opt-btn sel" onclick="pickSize(this)">M</button>
+            <button class="opt-btn" onclick="pickSize(this)">L</button>
+            <button class="opt-btn" onclick="pickSize(this)">XL</button>
+            <button class="opt-btn out" disabled>XXL</button>
+          </div>
+        </div>
+
+        <button class="btn btn-dark pd-atc" onclick="addToCart(this)">
+          Add to Cart
+        </button>
+
+        <!-- Trust strip -->
+        <div class="pd-trust">
+          <div class="pd-trust-item">
+            <div class="pd-trust-icon">🚚</div>
+            <span class="pd-trust-label">Free Shipping</span>
+            over ₩80,000
+          </div>
+          <div class="pd-trust-item">
+            <div class="pd-trust-icon">↩</div>
+            <span class="pd-trust-label">Free Returns</span>
+            within 30 days
+          </div>
+          <div class="pd-trust-item">
+            <div class="pd-trust-icon">🔒</div>
+            <span class="pd-trust-label">Secure Pay</span>
+            encrypted
+          </div>
+          <div class="pd-trust-item">
+            <div class="pd-trust-icon">✦</div>
+            <span class="pd-trust-label">Premium Quality</span>
+            guaranteed
+          </div>
+        </div>
+
+        <!-- Specs -->
+        <div style="margin-top:28px;">
+          <div class="pd-spec">
+            <span class="pd-spec-key">Material</span>
+            <span class="pd-spec-val">100% Recycled Polyester</span>
+          </div>
+          <div class="pd-spec">
+            <span class="pd-spec-key">Fill</span>
+            <span class="pd-spec-val">Synthetic Down Alternative</span>
+          </div>
+          <div class="pd-spec">
+            <span class="pd-spec-key">Fit</span>
+            <span class="pd-spec-val">Regular Fit</span>
+          </div>
+          <div class="pd-spec">
+            <span class="pd-spec-key">Care</span>
+            <span class="pd-spec-val">Machine Wash Cold</span>
+          </div>
+          <div class="pd-spec">
+            <span class="pd-spec-key">Origin</span>
+            <span class="pd-spec-val">Made in Korea</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RELATED PRODUCTS -->
+<section style="background:var(--bg); padding-top:0;">
+  <div class="container">
+    <div class="sec-head">
+      <h2>You May Also Like</h2>
+      <a href="shop.html" class="sec-head-right">View All</a>
+    </div>
+    <div class="product-grid">
+
+      <a href="product.html" class="product-card">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1548126032-079a0fb0099d?w=600&q=80"
+            alt="Oversized Hoodie" loading="lazy">
+          <button class="thumb-action" aria-label="Add to cart">🛒</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star">★</span>
+            <span class="stars-count">(100)</span>
+          </div>
+          <div class="product-name">Oversized Hoodie</div>
+          <div class="product-price-row"><span class="product-price">₩12,699</span></div>
+        </div>
+      </a>
+
+      <a href="product.html" class="product-card">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?w=600&q=80"
+            alt="Corduroy Jacket" loading="lazy">
+          <button class="thumb-action" aria-label="Add to cart">🛒</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star">★</span>
+            <span class="stars-count">(200)</span>
+          </div>
+          <div class="product-name">Corduroy Jacket</div>
+          <div class="product-price-row"><span class="product-price">₩13,899</span></div>
+        </div>
+      </a>
+
+      <a href="product.html" class="product-card">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1520975954732-35dd22299614?w=600&q=80"
+            alt="Varsity Jacket" loading="lazy">
+          <span class="card-badge badge-hot">Hot</span>
+          <button class="thumb-action" aria-label="Add to cart">🛒</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star">★</span>
+            <span class="stars-count">(100)</span>
+          </div>
+          <div class="product-name">Varsity Jacket</div>
+          <div class="product-price-row"><span class="product-price">₩15,400</span></div>
+        </div>
+      </a>
+
+      <a href="product.html" class="product-card">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=600&q=80"
+            alt="Flannel Shirt" loading="lazy">
+          <button class="thumb-action" aria-label="Add to cart">🛒</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star star-empty">★</span>
+            <span class="stars-count">(206)</span>
+          </div>
+          <div class="product-name">Flannel Shirt</div>
+          <div class="product-price-row"><span class="product-price">₩6,495</span></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">ELEVN</a>
+        <p>Timeless style. Modern comfort. Quality pieces that last.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">in</a>
+          <a href="#" aria-label="Twitter">tw</a>
+          <a href="#" aria-label="Pinterest">p</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All products</a></li>
+          <li><a href="men.html">Hoodies</a></li>
+          <li><a href="men.html">Jackets</a></li>
+          <li><a href="women.html">Pants</a></li>
+          <li><a href="accessories.html">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>2026 ELEVN All Rights Reserved</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function swapImg(thumb, src) {
+    document.getElementById('mainImg').src = src;
+    document.querySelectorAll('.pd-thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  }
+  function pickSize(btn) {
+    document.querySelectorAll('#sizeGroup .opt-btn:not(.out)').forEach(b => b.classList.remove('sel'));
+    btn.classList.add('sel');
+  }
+  function pickColor(sw, label) {
+    document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('sel'));
+    sw.classList.add('sel');
+    document.getElementById('colorLabel').textContent = label;
+  }
+  let n = 0;
+  function addToCart(btn) {
+    n++;
+    document.getElementById('cartCount').textContent = n;
+    btn.textContent = '✓ Added to Cart';
+    btn.style.background = '#2d6a2d';
+    setTimeout(() => { btn.textContent = 'Add to Cart'; btn.style.background = ''; }, 2000);
+  }
+</script>
+
+</body>
+</html>
